@@ -1,0 +1,67 @@
+/* Tema: branco e rosa sakura */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #5b3a45;
+    min-height: 100vh;
+    background: linear-gradient(160deg, #ffffff 0%, #fff0f4 45%, #ffd9e3 100%);
+    background-attachment: fixed;
+}
+.font-anime { font-family: 'Mochiy Pop One', sans-serif; }
+.text-sakura { color: #f48fb1; }
+.bg-sakura { background-color: #f48fb1; }
+
+#sakura-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Cartões */
+.cartao {
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #ffd1dc;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 30px rgba(244, 143, 177, 0.25);
+}
+
+/* Contagem regressiva */
+.count-box {
+    min-width: 72px;
+    padding: 0.9rem 0.6rem;
+    text-align: center;
+}
+.count-box span.num { display: block; font-size: 2.2rem; line-height: 1; color: #ec6c97; }
+.count-box span.lbl { display: block; margin-top: .4rem; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: #a67c88; }
+@media (min-width: 768px) {
+    .count-box { min-width: 110px; padding: 1.2rem 1rem; }
+    .count-box span.num { font-size: 3.2rem; }
+}
+
+/* Botão */
+.btn-sakura {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    color: #fff;
+    font-size: 1.25rem;
+    background: linear-gradient(135deg, #f8a5c2, #ec6c97);
+    box-shadow: 0 10px 25px rgba(236, 108, 151, 0.45);
+    transition: transform .2s, box-shadow .2s;
+    animation: pulse 2s infinite;
+}
+.btn-sakura:hover { transform: scale(1.06); }
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 10px 25px rgba(236,108,151,.45); }
+    50%      { box-shadow: 0 10px 40px rgba(236,108,151,.8); }
+}
+
+.photo {
+    width: 100%; height: 16rem;
+    object-fit: cover;
+    border-radius: .9rem;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 20px rgba(244,143,177,.35);
+    background: linear-gradient(135deg, #ffe3ec, #ffc2d4);
+}

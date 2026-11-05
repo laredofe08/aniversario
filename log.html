@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falta pouco, Alice!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center">
+  <canvas id="sakura-canvas"></canvas>
+
+  <main class="relative z-10 text-center p-6 w-full max-w-3xl">
+    <h1 id="titulo" class="text-4xl md:text-6xl font-anime text-sakura drop-shadow-sm">Falta pouco, Alice!</h1>
+    <p id="subtitulo" class="mt-4 text-lg md:text-xl">Uma surpresa está sendo preparada para você 🌸</p>
+
+    <!-- Contagem regressiva -->
+    <div id="contagem" class="mt-10 flex justify-center gap-3 md:gap-6">
+      <div class="card count-box"><span class="num font-anime" id="dias">00</span><span class="lbl">dias</span></div>
+      <div class="card count-box"><span class="num font-anime" id="horas">00</span><span class="lbl">horas</span></div>
+      <div class="card count-box"><span class="num font-anime" id="minutos">00</span><span class="lbl">min</span></div>
+      <div class="card count-box"><span class="num font-anime" id="segundos">00</span><span class="lbl">seg</span></div>
+    </div>
+
+    <!-- Botão: só aparece quando a contagem chega a zero -->
+    <div id="area-botao" class="mt-10 hidden">
+      <a href="index.html" class="btn-sakura font-anime">Abrir minha homenagem 💌</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Data do aniversário: 07/11/2026 às 00:00 (mês começa em 0, então 10 = novembro)
+    const alvo = new Date(2026, 10, 7, 0, 0, 0);
+
+    const el = id => document.getElementById(id);
+    const dois = n => String(n).padStart(2, '0');
+
+    function atualizar() {
+      const falta = alvo - new Date();
+
+      if (falta <= 0) {
+        el('contagem').classList.add('hidden');
+        el('area-botao').classList.remove('hidden');
+        el('titulo').textContent = 'Chegou o grande dia! 🎉';
+        el('subtitulo').textContent = 'Sua homenagem está pronta, Alice.';
+        clearInterval(timer);
+        return;
+      }
+
+      const s = Math.floor(falta / 1000);
+      el('dias').textContent    = dois(Math.floor(s / 86400));
+      el('horas').textContent   = dois(Math.floor((s % 86400) / 3600));
+      el('minutos').textContent = dois(Math.floor((s % 3600) / 60));
+      el('segundos').textContent = dois(s % 60);
+    }
+
+    const timer = setInterval(atualizar, 1000);
+    atualizar();
+  </script>
+</body>
+</html>

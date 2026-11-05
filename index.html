@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parabéns, Alice!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 
+  <script>
+    // Protege a página: antes de 07/11/2026 volta para a contagem.
+    // Para testar, abra index.html?teste
+    if (new Date() < new Date(2026, 10, 7, 0, 0, 0) && !location.search.includes('teste')) {
+      location.replace('log.html');
+    }
+  </script> -->
+
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- Seção 1: Título -->
+  <header class="min-h-screen flex items-center justify-center text-center p-6">
+    <div class="relative z-10" data-aos="fade-in" data-aos-duration="1500">
+      <h1 class="text-5xl md:text-7xl font-anime text-sakura drop-shadow-sm">Feliz Aniversário,<br>Alice!</h1>
+      <p class="mt-6 text-lg text-[#a67c88]">Role para baixo ↓</p>
+    </div>
+  </header>
+
+  <!-- Seção 2: Fotos e mensagem -->
+  <main class="relative z-10 container mx-auto px-6 py-16 md:py-24 max-w-5xl">
+    <h2 class="text-3xl md:text-5xl font-anime text-sakura text-center mb-12" data-aos="fade-up">Para você, com carinho</h2>
+
+    <!-- Troque os nomes das fotos pelos seus arquivos dentro da pasta img/ -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-14">
+      <div class="cartao " data-aos="zoom-in">
+        <img src="img/WhatsApp Image 2026-11-04 at 22.24.09 (1).jpeg" alt="Foto 1" class="photo">
+      </div>
+      <div class="card data-aos="zoom-in" data-aos-delay="150">
+        <img src="img/WhatsApp Image 2026-11-04 at 22.24.09 (2).jpeg" alt="Foto 2" class="photo">
+      </div>
+      <div class="cartao" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/WhatsApp Image 2026-11-04 at 22.24.09 (3).jpeg" alt="Foto 3" class="photo">
+      </div>
+      <div class="cartao" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/WhatsApp Image 2026-11-04 at 22.24.10 (1).jpeg" alt="Foto 4" class="photo">
+      </div>
+      <div class="cartao" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/torre.jpeg" alt="Foto 5" class="photo">
+      </div>
+      <div class="cartao" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/WhatsApp Image 2026-11-04 at 22.24.10.jpeg" alt="Foto 6" class="photo">
+      </div>
+      <div class="cartao" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/WhatsApp Image 2026-11-05 at 17.26.24.jpeg" alt="Foto 7" class="photo ">
+      </div>
+      <div class="cartao" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/mijo.jpeg" alt="Foto 8" class="photo">
+      </div>
+      <div class="cartao" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/WhatsApp Image 2026-11-05 at 17.32.08.jpeg" alt="Foto 9" class="photo">
+      </div>
+
+
+      <div class="cartao" id="card10" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/WhatsApp Image 2026-11-05 at 17.57.31.jpeg" alt="Foto 10" class="photo10">
+      </div>
+      <div class="cartao" id="card10" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/WhatsApp Image 2026-11-05 at 18.09.23.jpeg" alt="Foto 10" class="photo10">
+      </div>
+      <div class="cartao" id="card10" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/WhatsApp Image 2026-11-05 at 18.04.58.jpeg" alt="Foto 10" class="photo10">
+      </div>
+    </div>
+
+    <div class="cartao max-w-3xl mx-auto p-8 text-lg leading-relaxed space-y-4" data-aos="fade-up">
+      <p>Oi, Aliceee</p>
+      <p>Então, quero de desejar um feliz aniversário, que você nunca deixe de ser essa pessoa incrivel que você é, alegre, engraçada, carismatica, que você nunca perca essa luz que anda com você. Nunca vou esquecer das "aventuras" com nosso grupinho no nono ano KKKKKKK, enfim, que Deus abençoe não só você mas toda sua família, que ele te ilumine na sua caminhada e que você nuca se desvie desse caminho.  </p>
+      <p>Que este novo ciclo seja cheio de alegria, saúde e muitas coisas boas.</p>
+      <p class="text-right mt-8">Com carinho,<br><span class="text-sakura font-anime">Larwdo</span></p>
+    </div>
+  </main>
+
+  <footer class="relative z-10 text-center py-8 text-[#a67c88]">
+    <p>Aproveita o maximo teu diaa!</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
